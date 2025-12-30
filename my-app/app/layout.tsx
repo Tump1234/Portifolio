@@ -27,7 +27,9 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <canvas id="particles-canvas" style={{position: 'fixed', inset: 0, zIndex: -1, pointerEvents: 'all'}}></canvas>
         {children}
+        <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
       </body>
     </html>
   );

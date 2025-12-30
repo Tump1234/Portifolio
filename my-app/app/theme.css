@@ -1,0 +1,86 @@
+/* Theme CSS Variables */
+:root[data-theme="monocore-default"] {
+  --bg: #000000;
+  --text: #ffffff;
+  --accent: #ffffff;
+  --particle-color: #ffffff;
+  --cursor-glow: #ffffff;
+}
+
+:root[data-theme="crimson-red"] {
+  --bg: #0a0a0a;
+  --text: #ffffff;
+  --accent: #ff4444;
+  --particle-color: #ff4444;
+  --cursor-glow: #ff6666;
+}
+
+:root[data-theme="cyberpunk"] {
+  --bg: #0d0221;
+  --text: #00f9ff;
+  --accent: #ff00c1;
+  --particle-color: #00f9ff;
+  --cursor-glow: #ff00c1;
+}
+
+:root[data-theme="ocean-blue"] {
+  --bg: #0a0a0a;
+  --text: #ffffff;
+  --accent: #00cccc;
+  --particle-color: #00cccc;
+  --cursor-glow: #00ffff;
+}
+
+:root[data-theme="forest-green"] {
+  --bg: #0a0a0a;
+  --text: #ffffff;
+  --accent: #00cc44;
+  --particle-color: #00cc44;
+  --cursor-glow: #00ff66;
+}
+
+:root[data-theme="gold"] {
+  --bg: #0a0a0a;
+  --text: #ffffff;
+  --accent: #ffd700;
+  --particle-color: #ffd700;
+  --cursor-glow: #ffed4e;
+}
+
+/* Default theme fallback */
+:root {
+  --bg: #000000;
+  --text: #ffffff;
+  --accent: #ffffff;
+  --particle-color: #ffffff;
+  --cursor-glow: #ffffff;
+}
+
+/* Entrance animation keyframes */
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-in {
+  animation: fade-up 0.8s ease-out forwards;
+}
+
+.animate-in > * {
+  opacity: 0;
+  animation: fade-up 0.8s ease-out forwards;
+}
+
+.animate-in > *:nth-child(1) { animation-delay: 0.1s; }
+.animate-in > *:nth-child(2) { animation-delay: 0.2s; }
+.animate-in > *:nth-child(3) { animation-delay: 0.3s; }
+.animate-in > *:nth-child(4) { animation-delay: 0.4s; }
+.animate-in > *:nth-child(5) { animation-delay: 0.5s; }
+.animate-in > *:nth-child(6) { animation-delay: 0.6s; }
+.animate-in > *:nth-child(7) { animation-delay: 0.7s; }

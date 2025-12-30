@@ -6,7 +6,7 @@ import { projects } from '../data/mock';
 
 const Projects = () => {
   const [activeFilter, setActiveFilter] = useState('All');
-  const [hoveredProject, setHoveredProject] = useState(null);
+  const [hoveredProject, setHoveredProject] = useState<number | null>(null);
 
   const categories = ['All', 'Web Development', 'Design', 'Management'];
   
@@ -14,7 +14,7 @@ const Projects = () => {
     ? projects 
     : projects.filter(project => project.category === activeFilter);
 
-  const getCategoryIcon = (category) => {
+  const getCategoryIcon = (category: string) => {
     switch (category) {
       case 'Web Development': return Monitor;
       case 'Design': return Palette;

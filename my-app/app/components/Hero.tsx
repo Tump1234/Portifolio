@@ -13,7 +13,7 @@ const Hero = () => {
   };
 
   return (
-    <section id="home" className="min-h-screen bg-black text-white relative overflow-hidden">
+    <section id="home" className="min-h-screen text-white relative overflow-hidden">
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
           backgroundImage: `radial-gradient(circle at 25% 25%, #333 1px, transparent 1px)`,
@@ -22,7 +22,7 @@ const Hero = () => {
       </div>
 
       <div className="relative z-10 max-w-6xl mx-auto px-6 flex items-center min-h-screen">
-        <div className="grid md:grid-cols-2 gap-12 items-center w-full">
+        <div className="grid md:grid-cols-2 gap-12 items-center w-full animate-in">
           <div className="space-y-8">
             <div className="space-y-4">
               <p className="text-gray-400 font-mono text-sm uppercase tracking-wider">
