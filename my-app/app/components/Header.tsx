@@ -63,17 +63,6 @@ const Header = () => {
           </nav>
 
           <div className="hidden md:flex items-center space-x-4">
-            <select
-              id="theme-switch"
-              className="bg-transparent border border-gray-600 text-gray-300 px-3 py-1 rounded font-mono text-sm focus:outline-none focus:border-white"
-            >
-              <option value="monocore-default">Monocore</option>
-              <option value="crimson-red">Crimson</option>
-              <option value="cyberpunk">Cyberpunk</option>
-              <option value="ocean-blue">Ocean</option>
-              <option value="forest-green">Forest</option>
-              <option value="gold">Gold</option>
-            </select>
             <a
               href={personalInfo.socialLinks.github}
               target="_blank"
@@ -121,17 +110,6 @@ const Header = () => {
             ))}
             
             <div className="flex items-center space-x-6 pt-4 border-t border-gray-800">
-              <select
-                id="theme-switch-mobile"
-                className="bg-transparent border border-gray-600 text-gray-300 px-3 py-1 rounded font-mono text-sm focus:outline-none focus:border-white"
-              >
-                <option value="monocore-default">Monocore</option>
-                <option value="crimson-red">Crimson</option>
-                <option value="cyberpunk">Cyberpunk</option>
-                <option value="ocean-blue">Ocean</option>
-                <option value="forest-green">Forest</option>
-                <option value="gold">Gold</option>
-              </select>
               <a
                 href={personalInfo.socialLinks.github}
                 target="_blank"

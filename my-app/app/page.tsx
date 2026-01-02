@@ -54,75 +54,6 @@ export default function Home() {
       }
     };
 
-    // Theme switching
-    const initTheme = () => {
-      const savedTheme = localStorage.getItem('siteTheme') || 'monocore-default';
-      document.documentElement.dataset.theme = savedTheme;
-
-      const themeSwitches = ['theme-switch', 'theme-switch-mobile'];
-      themeSwitches.forEach(id => {
-        const themeSwitch = document.getElementById(id) as HTMLSelectElement;
-        if (themeSwitch) {
-          themeSwitch.value = savedTheme;
-          themeSwitch.addEventListener('change', (e) => {
-            const target = e.target as HTMLSelectElement;
-            const theme = target.value;
-            document.documentElement.dataset.theme = theme;
-            localStorage.setItem('siteTheme', theme);
-            // Sync both select elements
-            themeSwitches.forEach(otherId => {
-              if (otherId !== id) {
-                const otherSwitch = document.getElementById(otherId) as HTMLSelectElement;
-                if (otherSwitch) otherSwitch.value = theme;
-              }
-            });
-          });
-        }
-      });
-    };
-
-    // METACRAFTERS cursor
-    const initCursor = () => {
-      const cursor = document.createElement('div');
-      cursor.id = 'mc-cursor';
-      document.body.appendChild(cursor);
-
-      let mouseX = 0;
-      let mouseY = 0;
-      let cursorX = 0;
-      let cursorY = 0;
-
-      const updateCursor = () => {
-        cursorX += (mouseX - cursorX) * 0.1;
-        cursorY += (mouseY - cursorY) * 0.1;
-
-        cursor.style.left = `${cursorX - 15}px`;
-        cursor.style.top = `${cursorY - 15}px`;
-
-        requestAnimationFrame(updateCursor);
-      };
-
-      document.addEventListener('mousemove', (e) => {
-        mouseX = e.clientX;
-        mouseY = e.clientY;
-      });
-
-      // Hover effects
-      document.addEventListener('mouseenter', (e) => {
-        if (e.target && (e.target as HTMLElement).matches('a, button, [role="button"]')) {
-          cursor.classList.add('hover');
-        }
-      }, true);
-
-      document.addEventListener('mouseleave', (e) => {
-        if (e.target && (e.target as HTMLElement).matches('a, button, [role="button"]')) {
-          cursor.classList.remove('hover');
-        }
-      }, true);
-
-      updateCursor();
-    };
-
     // Click to spawn particles
     const initClickHandler = () => {
       const canvas = document.getElementById('particles-canvas');
@@ -150,8 +81,6 @@ export default function Home() {
 
     // Initialize everything when DOM is ready
     const init = () => {
-      initTheme();
-      initCursor();
       initClickHandler();
       initParticles();
     };

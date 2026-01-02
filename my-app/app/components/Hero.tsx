@@ -1,5 +1,3 @@
-'use client'
-
 import React from 'react';
 import { ArrowDown, Github, Facebook, Mail } from 'lucide-react';
 import { personalInfo } from '../data/mock';
@@ -22,7 +20,7 @@ const Hero = () => {
       </div>
 
       <div className="relative z-10 max-w-6xl mx-auto px-6 flex items-center min-h-screen">
-        <div className="grid md:grid-cols-2 gap-12 items-center w-full animate-in">
+        <div className="grid md:grid-cols-2 gap-12 items-center w-full">
           <div className="space-y-8">
             <div className="space-y-4">
               <p className="text-gray-400 font-mono text-sm uppercase tracking-wider">
@@ -90,8 +88,6 @@ const Hero = () => {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="absolute -top-4 -right-4 w-20 h-20 border-2 border-gray-600 rounded-full animate-pulse"></div>
-              <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-gray-800 rounded-full"></div>
             </div>
           </div>
         </div>

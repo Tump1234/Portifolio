@@ -24,24 +24,4 @@ body {
   background: var(--bg);
   color: var(--text);
   font-family: Arial, Helvetica, sans-serif;
-  cursor: none;
-}
-
-/* METACRAFTERS cursor */
-#mc-cursor {
-  position: fixed;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  background: var(--cursor-glow);
-  box-shadow: 0 0 10px var(--cursor-glow), 0 0 20px var(--cursor-glow);
-  pointer-events: none;
-  z-index: 9999;
-  transition: transform 0.1s ease, opacity 0.1s ease;
-  opacity: 0.7;
-}
-
-#mc-cursor.hover {
-  transform: scale(0.6);
-  opacity: 0.9;
 }
